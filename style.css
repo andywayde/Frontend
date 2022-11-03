@@ -1,0 +1,108 @@
+body {
+    background: #335C67;
+    padding: 20px;
+}
+
+h1 {
+    color: #FFF3B0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.left-section {
+    flex-grow: 3;
+    height: 500px;
+}
+
+.right-section {
+    flex-grow: 1;
+    border-left: #FFF3B0 solid;
+    height: 500px;
+    min-width: 500px;
+}
+
+.menu-item-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+ .menu-btn {
+    background: transparent;
+    height: 60px;
+    width: 320px;
+    border-color: #FFF3B0;
+    border-radius: 8px;
+    color: #FFF3B0;
+    font-size: larger;
+ }
+
+ .menu-btn:hover {
+    background: #FFF3B0;
+    color: #335C67;
+ }
+
+ .jokes {
+    max-width: 500px;
+ }
+
+ .setup {
+    font-size: 50px;
+    color: #FFF3B0;
+ }
+
+ .riddle {
+    font-size: 25px;    
+    color: #FFF3B0;
+ }
+
+ .answer {
+    font-size: 20px;
+    color: #FFF3B0;
+ }
+
+ .punchline {
+    font-size: 30px;
+    color: #FFF3B0;
+ }
+
+ .qoutes-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+.quote-container {
+    font-size: 60px;
+    color: #FFF3B0;
+    height: fit-content;
+}
+
+.author-container {
+    font-size: 30px;
+    color: #FFF3B0;
+    height: fit-content;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme {
+    max-width: 500px;   
+    max-height: 500px;
+    border-radius: 8px;
+}
+
