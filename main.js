@@ -41,11 +41,6 @@ const showQuote = () => {
   });   
 };
 
-const hideBtn = () => {
-  document.querySelector('#show-punchline-btn').style.display = 'none';
-  console.log('Btn hidden');
-}
-
 const showJoke = () => {
 
   document.querySelector('#quotes').style.display = 'none';
@@ -79,20 +74,25 @@ const showJoke = () => {
 }
 
 const showMeme = () => {
-
-  document.querySelector('#meme').replaceChildren = '';
   document.querySelector('#memes').style.display = 'block';
   document.querySelector('#quotes').style.display = 'none';
   document.querySelector('#jokes').style.display = 'none';
   document.querySelector('#riddles').style.display = 'none';
 
+  document.querySelector('#loader').style.display = 'block';
+  const meme = document.querySelector('#meme-img');
+  document.querySelector('.img-container').removeChild(meme)
+  
+
   fetch("https://meme-api.herokuapp.com/gimme")
   .then(result => result.json())
   .then(data => {
-    console.log(data.url);
+    document.querySelector('#loader').style.display = 'none';
 
-    const image = document.querySelector('#meme');
-    image.setAttribute('src', data.url);
+    const meme = document.createElement('img');
+    meme.setAttribute('src', data.url);
+    meme.setAttribute('id', 'meme-img');  
+    document.querySelector('.img-container').appendChild(meme);
   })
 }
 
